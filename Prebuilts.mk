@@ -6,7 +6,7 @@
 # package for a whole re-configuration procedure and achieve the same goal.
 
 
-x86_cflags := -DOPENSSL_BN_ASM_GF2m -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DAES_ASM -DGHASH_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DDES_PTR -DDES_RISC1 -DDES_UNROLL
+x86_cflags := -DOPENSSL_BN_ASM_GF2m -DOPENSSL_BN_ASM_MONT -DAES_ASM -DGHASH_ASM -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DDES_PTR -DDES_RISC1 -DDES_UNROLL
 
 ifeq ($(ARCH), ia32)
   CFLAGS := -m32 -DOPENSSL_BN_ASM_PART_WORDS
@@ -14,7 +14,7 @@ ifeq ($(ARCH), ia32)
 else
   ifeq ($(ARCH), x86_64)
     CC := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6/bin/x86_64-linux-gcc
-    CFLAGS := -m64
+    CFLAGS := -m64 -DOPENSSL_BN_ASM_MONT5
   else
     $(error Unsupported ARCH)
   endif
@@ -51,7 +51,8 @@ ia32_asm_files := \
   crypto/md5/asm/md5-586.s \
   crypto/des/asm/des-586.s \
   crypto/des/asm/crypt586.s \
-  crypto/bf/asm/bf-586.s
+  crypto/bf/asm/bf-586.s \
+  crypto/x86cpuid.s
 
 # stub for extra 32-bit c files.
 ia32_c_files := 
