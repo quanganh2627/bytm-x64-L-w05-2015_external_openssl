@@ -576,6 +576,8 @@ x86_c_flags := \
   -DSHA1_ASM \
   -DSHA256_ASM \
   -DSHA512_ASM \
+  -D__i386__ \
+  -DOPENSSL_IA32_SSE2
 
 x86_src_files := \
   crypto/aes/asm/aes-586.S \
