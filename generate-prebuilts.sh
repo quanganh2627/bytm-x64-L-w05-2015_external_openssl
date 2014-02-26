@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUPPORTED_ARCH="ia32 x86_64"
+SUPPORTED_ARCH="x86_64"
 
 MANUAL_RECOVER="You need to recover the source directory by hand and build again."
 
