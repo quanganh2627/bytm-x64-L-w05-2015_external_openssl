@@ -44,3 +44,6 @@ id_GostR3411_94_with_GostR3410_2001	id_GostR3411_94 id_GostR3410_2001
 id_GostR3411_94_with_GostR3410_94	id_GostR3411_94 id_GostR3410_94
 id_GostR3411_94_with_GostR3410_94_cc	id_GostR3411_94 id_GostR3410_94_cc
 id_GostR3411_94_with_GostR3410_2001_cc	id_GostR3411_94 id_GostR3410_2001_cc
+
+# WAPI signature
+wapi_ecdsa192_sha256	sha256	X9_62_id_ecPublicKey

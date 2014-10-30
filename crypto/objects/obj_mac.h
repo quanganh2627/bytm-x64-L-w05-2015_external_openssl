@@ -4030,3 +4030,13 @@
 #define LN_aes_256_cbc_hmac_sha1		"aes-256-cbc-hmac-sha1"
 #define NID_aes_256_cbc_hmac_sha1		918
 
+#define SN_wapi_ecdsa192_sha256		"wapi-ecdsa192-sha256"
+#define LN_wapi_ecdsa192_sha256		"WAPI-ECDSA192-SHA256"
+#define NID_wapi_ecdsa192_sha256		920
+#define OBJ_wapi_ecdsa192_sha256		1L,2L,156L,11235L,1L,1L,1L
+
+#define SN_wapi_prime_field		"wapi-prime-field"
+#define LN_wapi_prime_field		"WAPI-PRIME-FIELD"
+#define NID_wapi_prime_field		921
+#define OBJ_wapi_prime_field		1L,2L,156L,11235L,1L,1L,2L,1L
+

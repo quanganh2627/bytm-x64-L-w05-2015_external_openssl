@@ -62,12 +62,12 @@
  * [including the GNU Public Licence.]
  */
 
-#define NUM_NID 920
-#define NUM_SN 913
-#define NUM_LN 913
-#define NUM_OBJ 857
+#define NUM_NID 922
+#define NUM_SN 915
+#define NUM_LN 915
+#define NUM_OBJ 859
 
-static const unsigned char lvalues[5980]={
+static const unsigned char lvalues[5997]={
 0x00,                                        /* [  0] OBJ_undef */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,               /* [  1] OBJ_rsadsi */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,          /* [  7] OBJ_pkcs */
@@ -925,6 +925,8 @@ static const unsigned char lvalues[5980]={
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x01,0x08,/* [5952] OBJ_mgf1 */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x01,0x0A,/* [5961] OBJ_rsassaPss */
 0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,0x01,0x07,/* [5970] OBJ_rsaesOaep */
+0x2A,0x81,0x1C,0xD7,0x63,0x01,0x01,0x01,     /* [5979] OBJ_wapi_ecdsa192_sha256 */
+0x2A,0x81,0x1C,0xD7,0x63,0x01,0x01,0x02,0x01,/* [5987] OBJ_wapi_prime_field */
 };
 
 static const ASN1_OBJECT nid_objs[NUM_NID]={
@@ -2406,6 +2408,10 @@ static const ASN1_OBJECT nid_objs[NUM_NID]={
 {"AES-256-CBC-HMAC-SHA1","aes-256-cbc-hmac-sha1",
 	NID_aes_256_cbc_hmac_sha1,0,NULL,0},
 {"RSAES-OAEP","rsaesOaep",NID_rsaesOaep,9,&(lvalues[5970]),0},
+{"wapi-ecdsa192-sha256","WAPI-ECDSA192-SHA256",
+	NID_wapi_ecdsa192_sha256,8,&(lvalues[5979]),0},
+{"wapi-prime-field","WAPI-PRIME-FIELD",NID_wapi_prime_field,9,
+	&(lvalues[5987]),0},
 };
 
 static const unsigned int sn_objs[NUM_SN]={
@@ -3317,6 +3323,8 @@ static const unsigned int sn_objs[NUM_SN]={
 740,	/* "wap-wsg-idm-ecid-wtls7" */
 741,	/* "wap-wsg-idm-ecid-wtls8" */
 742,	/* "wap-wsg-idm-ecid-wtls9" */
+920,	/* "wapi-ecdsa192-sha256" */
+921,	/* "wapi-prime-field" */
 804,	/* "whirlpool" */
 868,	/* "x121Address" */
 503,	/* "x500UniqueIdentifier" */
@@ -3433,6 +3441,8 @@ static const unsigned int ln_objs[NUM_LN]={
 129,	/* "TLS Web Server Authentication" */
 133,	/* "Time Stamping" */
 375,	/* "Trust Root" */
+920,	/* "WAPI-ECDSA192-SHA256" */
+921,	/* "WAPI-PRIME-FIELD" */
 12,	/* "X509" */
 402,	/* "X509v3 AC Targeting" */
 746,	/* "X509v3 Any Policy" */
@@ -4643,6 +4653,7 @@ static const unsigned int obj_objs[NUM_OBJ]={
 768,	/* OBJ_camellia_256_ofb128          0 3 4401 5 3 1 9 43 */
 759,	/* OBJ_camellia_256_cfb128          0 3 4401 5 3 1 9 44 */
 437,	/* OBJ_pilot                        0 9 2342 19200300 100 */
+920,	/* OBJ_wapi_ecdsa192_sha256         1 2 156 11235 1 1 1 */
 776,	/* OBJ_seed_ecb                     1 2 410 200004 1 3 */
 777,	/* OBJ_seed_cbc                     1 2 410 200004 1 4 */
 779,	/* OBJ_seed_cfb128                  1 2 410 200004 1 5 */
@@ -4820,6 +4831,7 @@ static const unsigned int obj_objs[NUM_OBJ]={
 439,	/* OBJ_pilotAttributeSyntax         0 9 2342 19200300 100 3 */
 440,	/* OBJ_pilotObjectClass             0 9 2342 19200300 100 4 */
 441,	/* OBJ_pilotGroups                  0 9 2342 19200300 100 10 */
+921,	/* OBJ_wapi_prime_field             1 2 156 11235 1 1 2 1 */
 108,	/* OBJ_cast5_cbc                    1 2 840 113533 7 66 10 */
 112,	/* OBJ_pbeWithMD5AndCast5_CBC       1 2 840 113533 7 66 12 */
 782,	/* OBJ_id_PasswordBasedMAC          1 2 840 113533 7 66 13 */

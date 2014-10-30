@@ -1290,3 +1290,9 @@ kisa 1 6                : SEED-OFB      : seed-ofb
 			: AES-128-CBC-HMAC-SHA1		: aes-128-cbc-hmac-sha1
 			: AES-192-CBC-HMAC-SHA1		: aes-192-cbc-hmac-sha1
 			: AES-256-CBC-HMAC-SHA1		: aes-256-cbc-hmac-sha1
+
+# WAPI EC object definitions
+!Cname wapi-ecdsa192-sha256
+1 2 156 11235 1 1 1		: wapi-ecdsa192-sha256		: WAPI-ECDSA192-SHA256
+!Cname wapi-prime-field
+1 2 156 11235 1 1 2 1		: wapi-prime-field		: WAPI-PRIME-FIELD
